@@ -1,11 +1,11 @@
 function firstWord(s) {
   // your code here
 	
-	let str=s.trim().split(' ');
-	if(str.length === 0){
-		return '';
+	let str=s.trim().match(/^\S+/);
+	if(str){
+		return str[0];
 	}
-	return str[0];
+	return '';
 }
 
 
@@ -13,5 +13,6 @@ function firstWord(s) {
 // Do not change the code below
 
 const s = prompt("Enter String:");
+
 
 alert(firstWord(s));
